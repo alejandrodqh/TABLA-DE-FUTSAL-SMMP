@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificación de Fútbol</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4853f3, #f8f6f6);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h2, h3 {
+            color: #130357;
+            margin-top: 20px;
+        }
+
+        .tabla-container {
+            width: 95%;
+            max-width: 800px;
+            margin: 30px auto;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffffcc;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 40px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #c5d303;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e0f7fa;
+        }
+
+        .imagenes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .imagenes img {
+            width: 80px;
+            height: auto;
+        }
+
+        @media (max-width: 600px) {
+            th, td {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .imagenes img {
+                width: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">CLIC PARA REGRESAR</a>
+    <h2>CLASIFICACION DE LOS SIGUIENTES PARTIDOS</h2>                      
+    <!-- Tabla de horarios -->
+    
+    <div class="tabla-container">
+        <table>
+            <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Equipo 1</th>
+                <th>Equipo 2</th>
+            </tr>
+            <tr>
+                <td>12/04/2025</td>
+                <td>18:00</td>
+                <td>6to A sec</td>
+                <td>6to B sec</td>
+            </tr>
+            <tr>
+                <td>13/04/2025</td>
+                <td>16:30</td>
+                <td>5to A sec</td>
+                <td>5to B sec</td>
+            </tr>
+            <tr>
+                <td>14/04/2025</td>
+                <td>20:00</td>
+                <td>4to A sec</td>
+                <td>4to B sec</td>
+            </tr>
+            <tr>
+                <td>15/04/2025</td>
+                <td>19:00</td>
+                <td>3ro A sec</td>
+                <td>3ro B sec</td>
+            </tr>
+        </table>
+    </div>
+    <a href="info.html">CLIC PARA VER NOVEDADES DE LOS PARTIDOS</a>
+</body>
+</html>
