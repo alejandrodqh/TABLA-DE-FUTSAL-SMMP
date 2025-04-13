@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Novedades de los partidos</title>
+     
   <style>
     body {
       font-family: Arial, sans-serif;
       background: linear-gradient(to right, #4853f3, #f8f6f6);
       background-color: #f4f4f4;
-      padding: 30px;
+      padding: 50px;
     }
     .tabla-container {
       background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      padding: 70px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      padding: 60px;
       max-width: 800px;
       margin: 0 auto;
     }
@@ -30,8 +31,8 @@
     th {
       background-color: #626beb;
       color: white;
-      padding: 10px;
-      font-size: 16px;
+      padding: 20px;
+      font-size: 20px;
     }
     td {
       padding: 12px;
@@ -46,8 +47,8 @@
     }
   </style>
 </head>
-                                                   
-<body>
+
+                                                  
   <div class="tabla-container">
     <h2>Novedades de los partidos</h2>
     <table>
@@ -79,9 +80,37 @@
           <td></td>
         </tr>
       </tbody>
-     
     </table>
   </div>
-  <a href="pro.html">CLIC PARA REGRESAR </a>
+  <div class="imagenes">
+
+                                  <img src="c:\Users\Equipo\Downloads\campeonato.png" alt="Pelota de fútbol">
+    
+</div> 
+<style>
+.imagenes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.imagenes img {
+  width: 200px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  th, td {
+      padding: 40px;
+      font-size: 34px;
+  }
+
+  .imagenes img {
+      width: 40px;
+  }
+}
+</style>
 </body>
 </html>
+<a href="pro.html">CLIC PARA REGRESAR </a>
