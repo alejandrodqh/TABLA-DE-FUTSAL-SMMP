@@ -2,89 +2,151 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Estadísticas de Jugadores 6to A</title>
+  <title>Tabla de Jugadores</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 30px;
+      padding: 40px;
+      text-align: center;
       background: linear-gradient(135deg, #5a5ce4, #fffffc);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    h1 {
+      color: #ffffff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     }
 
     table {
+      margin: auto;
       width: 90%;
-      max-width: 900px;
-      border-collapse: separate;
-      border-spacing: 0;
-      background: white;
-      border-radius: 16px;
+      border-collapse: collapse;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      background-color: white;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-      text-align: center; /* <-- Esto centra todo el contenido */
     }
 
-    caption {
-      font-size: 2em;
-      margin: 20px;
-      font-weight: bold;
-      color: #333;
+    th, td {
+      padding: 12px 20px;
+      border-bottom: 1px solid #ddd;
     }
 
     th {
       background-color: #eaec64;
-      color: #333;
-      padding: 15px 10px;
-      font-size: 1.1em;
-      border-bottom: 2px solid #edf043;
+      color: white;
+      position: sticky;
+      top: 0;
     }
 
-    td {
-      padding: 12px 10px;
-      border-bottom: 1px solid #eee;
-      font-size: 1em;
-      color: #444;
+    tr:nth-child(odd) {
+      background-color: #f9f9f9;
     }
 
-    tr:hover {
-      background-color: #f7f7f7;
-      transition: background-color 0.3s ease;
+    tr:nth-child(even) {
+      background-color: #e9f0ff;
     }
 
-    tr:last-child td {
-      border-bottom: none;
+    .roja {
+      color: red;
+      font-weight: bold;
+    }
+
+    .amarilla {
+      color: goldenrod;
+      font-weight: bold;
+    }
+
+    .banca {
+      background-color: #f0f0f0;
     }
   </style>
 </head>
 <body>
 
+  <h1>Estadísticas de Jugadores 2do B</h1>
+
   <table>
-    <caption>Estadísticas de Jugadores 2do B</caption>
     <thead>
       <tr>
         <th>Banca</th>
         <th>Jugador</th>
-        <th>Tarjetas Rojas</th>
-        <th>Tarjetas Amarillas</th>
-        <th>Asistencias</th>
+        <th>Tarjeta Roja</th>
+        <th>Tarjeta Amarilla</th>
         <th>Goles</th>
+        <th>Asistencias</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td>Juan Pérez</td><td>0</td><td>2</td><td>3</td><td>5</td></tr>
-      <tr><td>Carlos Gómez</td><td>1</td><td>1</td><td>1</td><td>2</td></tr>
-      <tr><td>Luis Torres</td><td>0</td><td>0</td><td>4</td><td>1</td></tr>
-      <tr><td>Andrés Ríos</td><td>0</td><td>3</td><td>2</td><td>3</td></tr>
-      <tr><td>Diego Ramírez</td><td>1</td><td>2</td><td>0</td><td>0</td></tr>
-      <tr><td>Fernando Díaz</td><td>0</td><td>1</td><td>5</td><td>4</td></tr>
-      <tr><td>Mario Suárez</td><td>0</td><td>0</td><td>1</td><td>6</td></tr>
-      <tr><td>José Herrera</td><td>0</td><td>2</td><td>2</td><td>2</td></tr>
+      <tr>
+        <td class="banca">No</td>
+        <td>Lionel Messi</td>
+        <td class="roja">0</td>
+        <td class="amarilla">1</td>
+        <td>2</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td class="banca">Sí</td>
+        <td>Sergio Ramos</td>
+        <td class="roja">1</td>
+        <td class="amarilla">2</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td class="banca">No</td>
+        <td>Kylian Mbappé</td>
+        <td class="roja">0</td>
+        <td class="amarilla">0</td>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td class="banca">Sí</td>
+        <td>Luka Modrić</td>
+        <td class="roja">0</td>
+        <td class="amarilla">1</td>
+        <td>0</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td class="banca">No</td>
+        <td>Erling Haaland</td>
+        <td class="roja">0</td>
+        <td class="amarilla">0</td>
+        <td>3</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td class="banca">Sí</td>
+        <td>Kevin De Bruyne</td>
+        <td class="roja">0</td>
+        <td class="amarilla">1</td>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td class="banca">No</td>
+        <td>Neymar Jr.</td>
+        <td class="roja">0</td>
+        <td class="amarilla">2</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td class="banca">Sí</td>
+        <td>Virgil van Dijk</td>
+        <td class="roja">0</td>
+        <td class="amarilla">0</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
     </tbody>
   </table>
-  
-
+  <a href="index.html">DALE CLIK PARA REGRESAR</a>
 </body>
 </html>
+
