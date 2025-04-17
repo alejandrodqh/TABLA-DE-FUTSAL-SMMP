@@ -1,142 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clasificación de Fútsal</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Clasificación por Curso</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 40px;
+      background: linear-gradient(to right, #5a5ce4, #fffffc);
+      background-attachment: fixed;
+      background-size: cover;
+      text-align: center;
+    }
+
+    table {
+      width: 90%;
+      margin: auto;
+      border-collapse: collapse;
+      box-shadow: 0 0 15px rgba(203, 236, 13, 0.849);
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #d7e239;
+      color: white;
+      position: sticky;
+      top: 0;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f9ff;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #e6f2ff;
+    }
+
+    td, th {
+      text-align: center;
+    }
+
+    .imagenes {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .imagenes img {
+      width: 100px;
+      height: auto;
+    }
+
+    @media (max-width: 600px) {
+  th, td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .imagenes img {
+    width: 60px;
+  }
+
+  p {
+    color: #1305ca;
+    font-size: 18px !important;
+  }
+}
+
+  </style>
 </head>
 <body>
-    <div class="imagenes">
-        <img src="campo.png" alt="Pelota de fútbol">
-        <img src="jugador.png" alt="Copa de campeón">
-    </div>
 
+  <div class="imagenes">
+    <img src="campeonato.png" alt="Pelota de fútbol">
+    <img src="jugador.png" alt="Copa de campeón">
+  </div>
 
-    <p style ="font-size : 60px;"> PROMO 2025 </p>
-    <p style ="font-size : 30px;"> TORNEO DE FUTSAL SMMP</p>
-    <p style ="font-size : 60px;"> TABLA DE CURSOS</p>
+  <p style="font-size: 60px;">PROMO 2025</p>
+  <p style="font-size: 30px;">TORNEO DE FUTSAL SMMP</p>
+  <p style="font-size: 60px;">TABLA DE CURSOS</p>
 
-    
-    <div class="tabla-container">
-        <table>
-            <tr>
-                <th>Informacion del equipo</th>
-                <th>Victorias</th>
-                <th>Empates</th>
-                <th>Derrotas</th>
-                <th>Puntos</th>
-            </tr>
-            <tr>
-                <td><a href="equipo 6toA.html">6to A sec.</a></td>
+  <table id="tabla-cursos">
+    <thead>
+      <tr>
+        <th>Información del equipo</th>
+        <th>Victorias</th>
+        <th>Empates</th>
+        <th>Derrotas</th>
+        <th>Puntos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><a href="equipo 6toA.html">6to A sec.</a>
+    </td><td>18</td><td>18</td><td>2</td><td>1000</td></tr>
+      <tr><td><a href="equipo 6toB.html">6to B sec.</a>
+    </td><td>15</td><td>18</td><td>5</td><td>45</td></tr>
+      <tr><td><a href="equipo 5toA.html">5to A sec.</a>
+    </td><td>13</td><td>18</td><td>7</td><td>39</td></tr>
+      <tr><td><a href="equipo 5toB.html">5to B sec.</a>
+    </td><td>10</td><td>10</td><td>18</td><td>30</td></tr>
+      <tr><td><a href="equipo 4toA.html">4to A sec.</a>
+    </td><td>10</td><td>10</td><td>18</td><td>30</td></tr>
+      <tr><td><a href="equipo 4toB.html">4to B sec.</a>
+    </td><td>10</td><td>10</td><td>18</td><td>30</td></tr>
+      <tr><td><a href="equipo 3roA.html">3ro A sec.</a>
+    </td><td>10</td><td>10</td><td>30</td><td>18</td></tr>
+      <tr><td><a href="equioi 3roB.html">3ro B sec.</a>
+    </td><td>10</td><td>10</td><td>18</td><td>30</td></tr>
+      <tr><td><a href="equipo 2do A.html">2do A sec.</a>
+    </td><td>10</td><td>18</td><td>10</td><td>30</td></tr>
+      <tr><td><a href="equipo 2doB.html">2do B sec.</a>
+    </td><td>10</td><td>18</td><td>10</td><td>100</td></tr>
+      <tr><td><a href="equipo 1ro A.html">1ro A sec.</a>
+    </td><td>10</td><td>10</td><td>18</td><td>30</td></tr>
+      <tr><td><a href="equipo 1roB.html">1ro B sec.</a>
+    </td><td>10</td><td>10</td><td>18</td><td>90</td></tr>
+    </tbody>
+  </table>
 
-                <td>18</td>
-                <td>18</td>
-                <td>2</td>
-                <td>54</td>
-            </tr>
-            <tr>
-                <td><a href="equipo 6toB.html">6to B sec.</a></td>
+  <script>
+    // Ordenar la tabla por puntos (columna 4)
+    window.addEventListener('DOMContentLoaded', () => {
+      const tabla = document.getElementById('tabla-cursos').getElementsByTagName('tbody')[0];
+      const filas = Array.from(tabla.rows);
 
-                <td>15</td>
-                <td>18</td>
-                <td>5</td>
-                <td>45</td>
-            </tr>
-            <tr>
-                <td><a href="equipo 5toA.html">5to A sec.</a></td>
+      filas.sort((a, b) => {
+        const puntosA = parseInt(a.cells[4].innerText);
+        const puntosB = parseInt(b.cells[4].innerText);
+        return puntosB - puntosA; // Orden descendente
+      });
 
-                <td>13</td>
-                <td>18</td>
-                <td>7</td>
-                <td>39</td>
-            </tr>
-            <tr>
-                <td><a href="equipo 5toB.html">5to B sec.</a></td>
+      filas.forEach(fila => tabla.appendChild(fila));
+    });
+  </script>
 
-                <td>10</td>
-                <td>10</td>
-                <td>18</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td><a href="equipo 4toA.html">4to A sec.</a></td>
+  <br><br>
+  <a href="pro.html">DALE CLICK PARA VER LOS HORARIOS</a>
+  <p style="font-size: 30px;">ESTA PÁGINA WEB FUE HECHA POR ESTUDIANTES DE 6TO DE INFORMÁTICA</p>
 
-                <td>10</td>
-                <td>10</td>
-                <td>18</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td><a href="equipo 4toB.html">4to B sec.</a></td>
-
-                <td>10</td>
-                <td>10</td>
-                <td>18</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td><a href="equipo 3roA.html">3ro A sec.</a></td>
-
-                <td>10</td>
-                <td>10</td>
-                <td>30</td>
-                <td>18</td>
-            </tr>
-            <tr>
-                <td><a href="equioi 3roB.html">3ro B sec.</a></td>
-
-                <td>10</td>
-                <td>10</td>
-                <td>18</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td><a href="equipo 2do A.html">2do A sec.</a></td>
-
-                <td>10</td>
-                <td>18</td>
-                <td>10</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td><a href="equipo 2doB.html">2do B sec.</a></td>
-
-                <td>10</td>
-                <td>18</td>
-                <td>10</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td><a href="equipo 1ro A.html">1ro A sec.</a></td>
-
-                <td>10</td>
-                <td>10</td>
-                <td>18</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td><a href="equipo 1roB.html">1ro B sec.</a></td>
-
-                <td>10</td>
-                <td>10</td>
-                <td>18</td>
-                <td>30</td>
-            </tr>
-            
-        
-        </table>
-    </div>
-    <title>Clasificación de Fútbol</title>
-    <style>
-      
-    </style>
-</head>
-
-<a href="pro.html">DALE CLIK PARA VER LOS HORARIOS</a>
-   <p style ="font-size : 30px;">  ESTA PAGINA WEB FUE HECHO POR  ESTUDIANTES DE 6TO DE INFORMATICA </p>
 </body>
 </html>
+
 
 
 
