@@ -5,14 +5,38 @@
   <title>Clasificación por Curso</title>
   <style>
     body {
+        margin: 0;
+      padding: 0;
+    
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 10px;
       background: linear-gradient(to right, #5a5ce4, #fffffc);
       background-attachment: fixed;
       background-size: cover;
       text-align: center;
     }
+
+   
+
+    .encabezado {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+     
+    }
+
+    .imagen {
+      width: 200px;
+      height: auto;
+    }
+    .lado {
+      width: 220px; /* espacio reservado para la imagen */
+      text-align: center;
+    }
+
+    
 
     table {
       width: 90%;
@@ -79,16 +103,29 @@
   </style>
 </head>
 <body>
-
+    <div class="encabezado">
+        <div class="lado">
+          <img src="smmp1.png" class="imagen" alt="Izquierda">
+        </div>
+    
+        <div class="titulo">
+            <p style="font-size: 60px;">PROMO 2025</p>
+            <p style="font-size: 30px;">TORNEO DE FUTSAL SMMP</p>
+            <p style="font-size: 60px;">TABLA DE CURSOS</p>
+        </div>
+    
+        <div class="lado">
+          <img src="PROMO25.png" class="imagen" alt="Derecha">
+        </div>
+      </div>
+    
+      
   <div class="imagenes">
-    <img src="premio.png" alt="campeonato">
+    <img src="campeonato.png" alt="Pelota de fútbol">
     <img src="jugador.png" alt="Copa de campeón">
   </div>
 
-  <p style="font-size: 60px;">PROMO 2025</p>
-  <p style="font-size: 30px;">TORNEO DE FUTSAL SMMP</p>
-  <p style="font-size: 60px;">TABLA DE CURSOS</p>
-
+ 
   <table id="tabla-cursos">
     <thead>
       <tr>
@@ -149,7 +186,5 @@
 
 </body>
 </html>
-
-
 
 
